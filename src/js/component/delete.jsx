@@ -1,14 +1,13 @@
 import React from "react";
 
-const Delete = ({ taskKey, tasksList, setTasksList }) => {
-    const eliminar = () => {
-        const newTasksList = tasksList.filter((_, index) => index !== taskKey);
-        setTasksList(newTasksList);
-    }
+const Delete = ({ id, deleteTask }) => {
+  const eliminar = () => {
+    deleteTask(id);
+  };
 
-    return (
-        <span className="delete-icon" onClick={eliminar}>❌</span>
-    )
-}
+  return (
+    <span className="delete-icon" onClick={eliminar}>❌</span>
+  );
+};
 
 export default Delete;
